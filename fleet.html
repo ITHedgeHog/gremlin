@@ -1,0 +1,52 @@
+---
+layout: default
+title: Fleet
+permalink: /fleet/
+mainmenu: true
+---
+<div class="container py-3">
+    <div class="row">
+      <div class="col">
+        <h1>Sigma Division Fleet</h1>
+        <p>Below is the make up for the Federation Patrol Division Sigma.</p>
+      </div>
+    </div>
+    {% for section in site.data.fleetsec %}
+    <hr>
+    <div class="row">
+        <div class="col text-center"><h3>{{ section.section }}</h3></div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {% for simm in site.data.fleet %}
+            {% if simm.section == section.section %}
+              <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ simm.name }}</h5>
+                        {% if simm.subtitle %}<h6 class="card-subtitle mb-2 text-muted">{{ simm.subtitle }}</h6>{% endif %}
+                        <h6 class="card-subtitle mb-2 text-muted">{{ simm.registry }}</h6>
+                        <p class="card-text"><strong>Class: </strong> {{ simm.class }}<br>
+                        {% if simm.crew %}
+                        <strong>Crew:</strong>
+                        <ul class="list-group text-center">
+                          {% for crew in simm.crew %}
+                          {% if crew.fdisplay == true %}
+                          {% assign crew_member = site.pages | find: "bioslug", crew.character %}
+                          <li class="list-group-item">
+                            {{ crew_member.ranktitle }} {{ crew_member.title }}<br>
+                            {{ crew.position }}<br>
+                            <img src="//img.sigma-division.com/ranks/{{ crew_member.rankimg}}" alt="{{ crew_member.ranktitle }} Rank Insignia" width="140">
+                          </li>
+                          {% endif %}
+                          {% endfor %}
+                        </ul>
+                        {% endif %}
+                        </p>
+                    </div>
+                </div>
+              </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
