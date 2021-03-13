@@ -1,74 +1,10 @@
 ---
-# Division Command
-- name: Starbase 10
-  registry: SB10
-  section: Division Command
-  subtitle: Division Base of Operations
-  class: Starbase
+- name: USS Gremlin
+  registry: NCC-77244
+  section: Rapid Response
+  class: Sovereign
   crew:
-    - character: augustusgardoff
-      position: Division Commanding Officer
-      fdisplay: true
-    - character: robertcartright
-      position: Base Commanding Officer
-      fdisplay: true
-# Patrol
-- name: USS Aquarius
-  registry: NCC-97033
-  section: Patrol Craft
-  class: Aquarius
-  crew:
-    - character: dustincummins
+    - character: curtisvamush
       position: Commanding Officer
       fdisplay: true
-    - character: chasestevens
-      position: Chief Engineer
-      fdisplay: false
-- name: USS Armidale
-  registry: tba
-  section: Patrol Craft
-  class: Wallace
-- name: USS Broome
-  registry: tba
-  section: Patrol Craft
-  class: Wallace
-- name: USS Padre
-  registry: tba
-  section: Patrol Craft
-  class: Wallace
-- name: USS Vashon
-  registry: tba
-  section: Patrol Craft
-  class: Wallace
-- name: USS Mersey
-  registry: tba
-  section: Patrol Craft
-  class: Wallace
-- name: USS Medway
-  registry: tba
-  section: Patrol Craft
-  class: Wallace
-# Support
-- name: USS Oberon
-  registry: tba
-  section: Support
-  subtitle: Division Support Frigate
-  class: Steamrunner
-- name: USS Kenneth
-  registry: tba
-  section: Support
-  subtitle: Emergancy Medical Response
-  class: Raven Class (Medical Varient)
-  crew:
-    - character: sabra
-      position: Chief Medical Officer
-      fdisplay: true
-    - character: manguslacher
-      position: Officer of the Deck
-      fdisplay: true
-- name: USS Mangus
-  registry: tba
-  section: Support
-  subtitle: Division Science Vessel
-  class: Raven Class
----
+    

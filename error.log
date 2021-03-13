@@ -1,0 +1,96 @@
+
+[2021-03-07T00:25:55.312Z] Error deploying frontend: Failed - Error: ImagePullBackOff
+
+━━━ Events ━━━
+Deployment frontend: ScalingReplicaSet - Scaled up replica set frontend-68f488785 to 1
+Pod frontend-68f488785-df2kc: Scheduled - Successfully assigned gremlin-default/frontend-68f488785-df2kc to pool-o5ihafy9e-8u26o
+Pod frontend-68f488785-df2kc: Pulling - Pulling image "registry.digitalocean.com/futilitysuite/gremlin:v-77032f556a"
+Pod frontend-68f488785-df2kc: Failed - Failed to pull image "registry.digitalocean.com/futilitysuite/gremlin:v-77032f556a": rpc error: code = Unknown desc = failed to pull and unpack image "registry.digitalocean.com/futilitysuite/gremlin:v-77032f556a": failed to resolve reference "registry.digitalocean.com/futilitysuite/gremlin:v-77032f556a": failed to authorize: failed to fetch anonymous token: unexpected status: 401 Unauthorized
+Pod frontend-68f488785-df2kc: Failed - Error: ErrImagePull
+Pod frontend-68f488785-df2kc: BackOff - Back-off pulling image "registry.digitalocean.com/futilitysuite/gremlin:v-77032f556a"
+Pod frontend-68f488785-df2kc: Failed - Error: ImagePullBackOff
+
+━━━ Pod logs ━━━
+<Showing last 30 lines per pod in this Deployment. Run the following command for complete logs>
+$ kubectl -n gremlin-default --context=do-lon1-fs-k8s-1 logs deployment/frontend
+
+****** frontend-68f488785-df2kc ******
+------ frontend ------<no logs>
+
+Error Details:
+
+serviceName: frontend
+status:
+  state: unhealthy
+  lastMessage: 'Failed - Error: ImagePullBackOff'
+  logs: "\e[37m━━━ Events ━━━\e[39m\n\e[94mDeployment frontend:\e[39m \e[37mScalingReplicaSet - Scaled up replica set frontend-68f488785 to 1\e[39m\n\e[94mPod frontend-68f488785-df2kc:\e[39m \e[37mScheduled - Successfully assigned gremlin-default/frontend-68f488785-df2kc to pool-o5ihafy9e-8u26o\e[39m\n\e[94mPod frontend-68f488785-df2kc:\e[39m \e[37mPulling - Pulling image \"registry.digitalocean.com/futilitysuite/gremlin:v-77032f556a\"\e[39m\n\e[94mPod frontend-68f488785-df2kc:\e[39m \e[33mFailed - Failed to pull image \"registry.digitalocean.com/futilitysuite/gremlin:v-77032f556a\": rpc error: code = Unknown desc = failed to pull and unpack image \"registry.digitalocean.com/futilitysuite/gremlin:v-77032f556a\": failed to resolve reference \"registry.digitalocean.com/futilitysuite/gremlin:v-77032f556a\": failed to authorize: failed to fetch anonymous token: unexpected status: 401 Unauthorized\e[39m\n\e[94mPod frontend-68f488785-df2kc:\e[39m \e[33mFailed - Error: ErrImagePull\e[39m\n\e[94mPod frontend-68f488785-df2kc:\e[39m \e[37mBackOff - Back-off pulling image \"registry.digitalocean.com/futilitysuite/gremlin:v-77032f556a\"\e[39m\n\e[94mPod frontend-68f488785-df2kc:\e[39m \e[33mFailed - Error: ImagePullBackOff\e[39m\e[37m\e[39m\n\e[37m\e[39m\n\e[37m━━━ Pod logs ━━━\e[39m\n\e[37m\e[39m\e[90m<Showing last 30 lines per pod in this Deployment. Run the following command for complete logs>\e[39m\n\e[90m$ kubectl -n gremlin-default --context=do-lon1-fs-k8s-1 logs deployment/frontend\e[39m\n\e[94m\e[39m\n\e[94m****** frontend-68f488785-df2kc ******\e[39m\n\e[94m\e[39m\e[90m------ frontend ------\e[39m<no logs>"
+  resource:
+    kind: Deployment
+    apiVersion: apps/v1
+    metadata:
+      name: frontend
+      namespace: gremlin-default
+      uid: c9269e38-97d0-4411-9fa5-fdf8fff5bc82
+      resourceVersion: '1443791'
+      generation: 1
+      creationTimestamp: '2021-03-07T00:25:51Z'
+      labels:
+        module: gremlin
+        service: frontend
+      annotations:
+        deployment.kubernetes.io/revision: '1'
+        garden.io/configured.replicas: '1'
+        garden.io/generated: 'true'
+        garden.io/manifest-hash: 527e10912c3354b786f3dacb97ba366fb66c860419b828a4a6347310c5612688
+        garden.io/version: v-77032f556a
+        kubectl.kubernetes.io/last-applied-configuration: >
+          {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{"garden.io/configured.replicas":"1","garden.io/generated":"true","garden.io/manifest-hash":"527e10912c3354b786f3dacb97ba366fb66c860419b828a4a6347310c5612688","garden.io/version":"v-77032f556a"},"labels":{"module":"gremlin","service":"frontend"},"name":"frontend","namespace":"gremlin-default"},"spec":{"replicas":1,"revisionHistoryLimit":3,"selector":{"matchLabels":{"service":"frontend"}},"strategy":{"rollingUpdate":{"maxSurge":1,"maxUnavailable":1},"type":"RollingUpdate"},"template":{"metadata":{"labels":{"module":"gremlin","service":"frontend"}},"spec":{"containers":[{"env":[{"name":"GARDEN_VERSION","value":"v-77032f556a"},{"name":"GARDEN_MODULE_VERSION","value":"v-77032f556a"},{"name":"GARDEN_DEPENDENCIES","value":"[{\"moduleName\":\"gremlin\",\"name\":\"gremlin\",\"type\":\"build\",\"version\":\"v-77032f556a\"}]"},{"name":"POD_HOST_IP","valueFrom":{"fieldRef":{"fieldPath":"status.hostIP"}}},{"name":"POD_IP","valueFrom":{"fieldRef":{"fieldPath":"status.podIP"}}},{"name":"POD_NAME","valueFrom":{"fieldRef":{"fieldPath":"metadata.name"}}},{"name":"POD_NAMESPACE","valueFrom":{"fieldRef":{"fieldPath":"metadata.namespace"}}},{"name":"POD_NODE_NAME","valueFrom":{"fieldRef":{"fieldPath":"spec.nodeName"}}},{"name":"POD_SERVICE_ACCOUNT","valueFrom":{"fieldRef":{"fieldPath":"spec.serviceAccountName"}}},{"name":"POD_UID","valueFrom":{"fieldRef":{"fieldPath":"metadata.uid"}}}],"image":"registry.digitalocean.com/futilitysuite/gremlin:v-77032f556a","imagePullPolicy":"IfNotPresent","name":"frontend","ports":[{"containerPort":80,"name":"http","protocol":"TCP"}],"resources":{"limits":{"cpu":"1","memory":"1Gi"},"requests":{"cpu":"10m","memory":"90Mi"}},"securityContext":{"allowPrivilegeEscalation":false}}],"dnsPolicy":"ClusterFirst","restartPolicy":"Always","terminationGracePeriodSeconds":5}}}}
+      managedFields: []
+    spec:
+      replicas: 1
+      selector:
+        matchLabels:
+          service: frontend
+      template:
+        metadata:
+          creationTimestamp: null
+          labels:
+            module: gremlin
+            service: frontend
+        spec:
+          containers: []
+          restartPolicy: Always
+          terminationGracePeriodSeconds: 5
+          dnsPolicy: ClusterFirst
+          securityContext: {}
+          schedulerName: default-scheduler
+      strategy:
+        type: RollingUpdate
+        rollingUpdate:
+          maxUnavailable: 1
+          maxSurge: 1
+      revisionHistoryLimit: 3
+      progressDeadlineSeconds: 600
+    status:
+      observedGeneration: 1
+      replicas: 1
+      updatedReplicas: 1
+      unavailableReplicas: 1
+      conditions: []
+
+
+[2021-03-07T00:25:55.328Z] 1 deploy task(s) failed!
+
+Error Details:
+
+results:
+  deploy.frontend:
+    type: deploy
+    description: deploying service 'frontend' (from module 'gremlin')
+    key: deploy.frontend
+    name: frontend
+    startedAt: 2021-03-07T00:25:51.147Z
+    completedAt: 2021-03-07T00:25:55.299Z
+    batchId: fc7df2ba-3a84-4734-af08-5fdf7c7e33fe
+    version: v-77032f556a
+

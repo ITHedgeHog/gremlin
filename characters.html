@@ -8,7 +8,7 @@ mainmenu: true
     <div class="row">
         <div class="col">
             <h1>Dramatis personae</h1>
-            <p>The cast of the USS Aquarius and Sigma Division Metaverse.</p>
+            <p>The cast of the USS Gremlin and Sigma Division Metaverse.</p>
         </div>
     </div>
     {% for ship in site.data.fleet %}
@@ -24,9 +24,9 @@ mainmenu: true
         <div class="col">
             <div class="card h-100 text-center">
                 {% if character.avatar %}
-                <img src="//img.sigma-division.com/characters/{{ character.avatar }}" alt="{{ character.title }} Avatar" class="card-img-top">
+                <img src="/assets/img/characters/{{ character.avatar }}" alt="{{ character.title }} Avatar" class="card-img-top">
                 {% else %}
-                <img src="//img.sigma-division.com/characters/blank_profile.png" alt="Blank Character Avatar" class="card-img-top">
+                <img src="/assets/img/characters/blank_profile.png" alt="Blank Character Avatar" class="card-img-top">
                 {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ character.title }}</h5>

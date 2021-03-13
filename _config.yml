@@ -18,12 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Federation Patrol Division Sigma
-email: vass@sigma-division.com
+title: USS Gremlin
+email: devops@stevethehedgehog.com
 description: >-
-  The Federation Patrol Division Sigma is a 2393, Star Trek Alternative Universe meta-verse foreshadowing the events of Star Trek: Picard.
-  Based out of Starbase 10, near the Romulan Neutral Zone, the Patrol Division protects the Federation Borders in a volitile area of space
-  as the effects of the collapse of the Romulan Star Empire are felt.
+  USS Gremlin NCC-72927 operates in the year 2393 within the Sigma Division meta-verse, Star Trek Alternative Universe foreshadowing the events of Star Trek: Picard.
+  near area of Independent space surrounded by the Romulan Empire, Klingon Empire and Federation Space.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
