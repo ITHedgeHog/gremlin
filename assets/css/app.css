@@ -1,7 +1,7 @@
 #homeHero {
     margin-top: 56px;
     height: 60vh !important;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(//img.sigma-division.com/hero.jpg) no-repeat center center fixed;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/assets/img/sovereign_class.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -15,7 +15,7 @@
 
 @supports (-webkit-overflow-scrolling: touch) {
     #homeHero {
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(//img.sigma-division.com/hero.jpg) no-repeat 50% 50%;
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/assets/img/sovereign_class.jpg) no-repeat 50% 50%;
         background-size: cover;
 	    overflow-y:scroll;
     }
@@ -53,7 +53,7 @@
 #pageHero {
     margin-top: 56px;
     height: 8rem;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(//img.sigma-division.com/hero3.jpg) no-repeat center center scroll;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/assets/img/sovereign_class.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
