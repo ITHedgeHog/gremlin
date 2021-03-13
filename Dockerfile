@@ -1,8 +1,11 @@
 FROM ruby:2.7.1-buster AS build
 COPY . /app
 WORKDIR /app
-RUN bundle install \
-    && bundle exec jekyll build 
+RUN gem install bundle jekyll
+RUN bundle config --global jobs 4
+RUN bundle config set deployment 'true' 
+RUN bundle install
+RUN bundle exec jekyll build -d /app/deploy
 
 FROM nginxinc/nginx-unprivileged AS final
-COPY --from=build /app/_site /usr/share/nginx/html
+COPY --from=build /app/deploy /usr/share/nginx/html
