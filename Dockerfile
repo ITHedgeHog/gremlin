@@ -7,6 +7,6 @@ RUN bundle config set deployment 'true'
 RUN bundle install
 RUN bundle exec jekyll build -d /app/deploy
 
-FROM nginx:alpine AS final
+FROM nginxinc/nginx-unprivileged AS final
 COPY --from=build /app/deploy /usr/share/nginx/html
 RUN find /usr/share/nginx/html/assets -type f -exec chmod 644 {} \;
