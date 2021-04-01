@@ -7,4 +7,4 @@ mainmenu: true
 
 ## The continuing adventures of USS Gremlin
 
-<i>Coming soon, the prelude</i>
+ * [Prelude Part One](prologue-pt1/)
